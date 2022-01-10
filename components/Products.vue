@@ -4,7 +4,7 @@
         cols="2">
         <v-card : title="product.title">
             <v-card-actions>
-                <v-img :src="require(`@/assets/images/products/${product.thumbnail}`)"></v-img>
+                <v-img :src="require(`@/assets/image/products/${product.thumbnail}`)"></v-img>
             </v-card-actions>
             <v-card-text>
                 {{ product.title }}
