@@ -1,8 +1,7 @@
 <template>
     <v-row>
-        <v-col v-for="(product, index) in products"
-        cols="2">
-        <v-card : title="product.title">
+        <v-col v-for="(product, index) in products" cols="2">
+        <v-card :title="product.title">
             <v-card-actions>
                 <v-img :src="require(`@/assets/image/products/${product.thumbnail}`)"></v-img>
             </v-card-actions>
@@ -16,8 +15,24 @@
     </v-row>
 </template>
 
-import { defineComponent } from '@vue/composition-api'
+<script>
+    
 
-export default(
+
+export default
+(
+    {
+        data()
+        {
+            return{
+                products: 
+                [
+                    {id :1, title: 'Asus Zenfone', thumbnail:'asus-zenfone.png', price: 2000000, categoryId: 1}
+                ]
+            }
+        }
+    }
     
 )
+
+</script>
